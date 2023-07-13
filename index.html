@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand-Writing-Frontend</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <!-- load hanzi -->
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <ul>
+          <li>
+            <a href=""
+              ><img
+                src="assets/20230201-BaoDaoTalk_LOGO_橫式.png"
+                alt=""
+                id="logo"
+            /></a>
+          </li>
+          <!-- <li><a href="">Select courses</a></li>
+          <li><a href="">Free Videos Learning</a></li> -->
+        </ul>
+        <!-- <ul>
+          <li>
+            <select name="" id="">
+              <option value="">US-English</option>
+              <option value="">CN-Chinese</option>
+            </select>
+          </li>
+          <li><a href="">Become Teacher</a></li>
+          <li><a href="">Sign in / Register</a></li>
+        </ul> -->
+      </nav>
+      <section>
+        <div class="search">
+          <input type="text" placeholder="請輸入想學習的句子" />
+          <input type="submit" value="輸入" onclick="getUserInput()" />
+        </div>
+
+        <div class="container"></div>
+      </section>
+    </div>
+  </body>
+</html>
