@@ -3,17 +3,16 @@ window.addEventListener("load", () => {
   const load = document.querySelector(".page-load");
   const logo = document.querySelector(".logo");
 
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      logo.classList.add("show");
-      load.classList.add("out");
-      resolve(); // Resolve the promise after the code execution
-    }, 500);
-  });
+  setTimeout(() => {
+    logo.classList.add("show");
+    load.classList.add("out");
+    resolve(); // Resolve the promise after the code execution
+  }, 500);
 });
 
 const passwordForm = document.getElementById("passwordForm");
 const passwordBlock = document.querySelector(".password");
+
 passwordForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -21,11 +20,9 @@ passwordForm.addEventListener("submit", function (event) {
   const password = passwordInput.value;
 
   if (password === "shang") {
-    // Password is correct
     alert("Access granted!");
     passwordBlock.classList.add("out");
   } else {
-    // Password is incorrect
     alert("Incorrect password. Please try again.");
     passwordInput.value = ""; // Clear the input field
     passwordInput.focus(); // Set focus back to the input field
