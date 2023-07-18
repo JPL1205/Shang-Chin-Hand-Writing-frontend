@@ -13,13 +13,29 @@ window.addEventListener("load", () => {
 const passwordForm = document.getElementById("passwordForm");
 const passwordBlock = document.querySelector(".password");
 
+function passwordVerification(input) {
+  const passwords = [
+    "vI998k",
+    "94o9zF",
+    "c97z3D",
+    "80BA8u",
+    "Jzd631",
+    "944dNq",
+    "3z47Nz",
+    "Q263Lu",
+    "cDo386",
+    "hH643J",
+  ];
+  return passwords.includes(input) ? true : false;
+}
+
 passwordForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const passwordInput = document.getElementById("password");
   const password = passwordInput.value;
 
-  if (password === "shang") {
+  if (passwordVerification(password)) {
     alert("Access granted!");
     passwordBlock.classList.add("out");
   } else {
